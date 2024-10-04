@@ -1,17 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <HeaderComponent />  <!-- Компонент шапки -->
+    <router-view />      <!-- Здесь будут отображаться маршруты, например, HomePage -->
+    <FooterComponent />  <!-- Компонент подвала -->
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderComponent from './components/HeaderComponent.vue'; // Импортируем компонент шапки
+import FooterComponent from './components/FooterComponent.vue'; // Импортируем компонент подвала
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    HeaderComponent,
+    FooterComponent,
+  },
+};
 </script>
 
 <style>
@@ -23,4 +28,6 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+/* Можешь добавить здесь свои стили, если нужно */
 </style>
